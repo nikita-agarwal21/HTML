@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+     <script>
+         function doFlag()
+         {
+             var flag= document.flagForm.flag.value;
+             alert(flag);
+             document.getElementById("x").innerHTML = "<img src=\"images/" + flag + "\" height=200 width=300 />";
+         }        
+     </script> 
+  </head>
+
+  <body style="background-color: purple; text-align: center">
+    <form name="flagForm" > 
+     <select name="flag" >
+        <option value="France.jpg">FRANCE</option>
+        <option value="Germany.jpg">GERMANY</option>
+        <option value="India.jpg">INDIA</option>
+     </select>
+<!--
+  <img src="images/Germany.jpg"> ----inside a folder---- <img src="../France.jpg"> -----relative file path-----
+-->   
+     <br>
+     <br>
+     <input type="button" value="submit" onClick="return doFlag()" />  
+     <br>
+     <br>
+     <div id="x"></div>
+    </form>
+  </body>
+
+</html>
