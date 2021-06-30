@@ -1,0 +1,125 @@
+<!doctype >
+<html>
+<head>
+   <title>first website</title>
+   <style>table,th,td{
+   border:1px solid blue;
+   }</style>
+</head>
+<body>
+  <h1> heading</h1>
+  <p>this is a paragraph</p>
+  <a href="https://www.google.com/" target="_blank">  click here to search </a><!--wont  affect the current page opens a new page-->
+<!--list--> 
+ <ul>
+	<li>list item1</li>
+	<li><em>list item1</em></li>
+	<li>list item1</li>
+	<li><b>list item1</b></li>
+	<li>list item1</li>
+  </ul>
+  <ol>
+	<li>list item1</li>
+	<li>list item1</li>
+	<li>list item1</li>
+	<li>list item1</li>
+	<li>list item1</li>
+  </ol>
+  <!--tables-->
+  <table>
+     <thead>
+		<tr>
+			<th>name</th>
+			<th>age</th>
+			<th>gender</th>
+		</tr>
+	 </thead>
+	 <tbody>
+		<tr>
+			<td>nikita</td>
+			<td>15</td>
+			<td>f</td>
+		</tr>	
+		<tr>
+			<td>kenny</td>
+			<td>17</td>
+			<td>m</td>
+		</tr>
+	 </tbody>
+  </table>
+  <br><!--line break-->
+  <hr><!--horizontal line-->
+  <br>
+  
+  
+   <form action="process.php" method="POST"> <!--POST=SECURE,GET=NOT THAT SECURE-->
+        <div>       <!--block of code--> 
+			<label>first name</label>
+			<input type="text" name="first-name" value="enter your first name">
+        </div> 
+		<br>
+        <div>       <!--block of code--> 
+			<label>last name</label>
+			<input type="text" name="last-name" placeholder="enter your last name">
+        </div>
+		<br>
+		 <div>       <!--block of code--> 
+			<label>email</label>
+			<input type="email" name="email">
+        </div> 
+		<br>
+		 <div>       <!--block of code for long message--> 
+			<label>Message</label>
+			<textarea name="message" ></textarea>  
+        </div> 
+		<br>
+		 <div>       <!--block of code to give option--> 
+			<label>gender</label>
+			<select name="gender">
+			<option value="male">Male</option>
+			<option value="female">Female</option>
+			<option value="other">Other</option>
+			</select>
+        </div> 
+		<br>
+		 <div>       <!--block of code--> 
+			<label>age</label>
+			<input type="number" name="age" values="30">
+        </div>
+		<br>
+		 <div>       <!--block of code--> 
+			<label>Birthday:</label>
+			<input type="date" name="birthday">
+        </div>
+		<br>
+		   <input type="submit" name="Submit" value="submit">
+   </form>
+   <!--button outside form   "button click=some function from java"-->
+   <button>click me</button>
+   <br>
+   <hr>
+   <br>
+   
+   <!--images-->
+   <a href="kenny.jpg">  <!--opens in browser-->
+  <img src="kenny.jpg" alt="kenny sebastian pic" width="200">
+   </a>
+   <img src="image/kenny kid.jpg" alt="one more pic of the same " width="100">  <!--provide path-->
+   <br>
+  <!--quotation-->
+   <blockquote cite="www.kennysebastian.com">
+          Kenneth Mathew Sebastian, better known as Kenny Sebastian, 
+		  is an Indian stand-up comedian, musician, and filmmaker. He came into the 
+		  limelight through a YouTube channel that broadcasted the clips of his stand up 
+		  comedy shows.
+		  Kenny Sebastian was born into a middle-class family in Kerala. 
+		  He grew up in different parts of India as his father was an employee
+		  of the Indian Navy. Kenny was very naughty as a kid. Kenny developed an
+		  interest in film direction at a very young age.
+   </blockquote>
+   <!--abrevation given-->
+   <p><abbr title="kenny sebastian kendom">KSK</abbr>members are kind!!</p>
+   <p><cite>kenny sebastian</cite> for kenny info</p>
+   
+</body>
+</html>
