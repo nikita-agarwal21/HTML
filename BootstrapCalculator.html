@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>calculator</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script>
+        function doCalculator(operator)
+        {
+
+            var n = document.addForm.operator.length;
+
+            alert('No of radio buttons = ' + n);
+
+            var flag = false;
+            var i;
+
+            for ( i = 0; i < n; i++ )
+            {
+                if ( document.addForm.operator[i].checked )
+               {
+                  flag = true;
+                  break;
+               }
+            }
+
+            if ( flag == false )
+            {
+                alert('Choose an operator');
+                return false;
+            }
+
+            operator = document.addForm.operator[i].value; 
+            alert('operator = ' + operator); 
+
+            var opr1 = document.addForm.operand1.value;
+            var opr2 = document.addForm.operand2.value;
+
+            alert('opr1 = ' + opr1);
+            alert('opr2 = ' + opr2);
+
+            var p = parseInt(opr1);
+            var q = parseInt(opr2);
+            var result;
+
+            switch (operator) 
+            {
+
+                case '+' :
+                      result = p + q;
+                      break;
+
+                case '-' :
+                      result = p - q;
+                      break;
+
+                case '*' :
+
+                      result = p * q;
+                      break;
+
+                case '/' :
+
+                      result = p / q;
+                      break;
+            } 
+
+            alert('result = ' + result); 
+
+            document.getElementById('result').innerHTML = result;
+        }
+
+     </script>
+
+
+</head>
+  <body>
+    <br>
+    <br>
+    <div class="container " 
+
+     style="background-color:aqua;">
+    <form name="addForm" >
+      <br><br> Operand 1 : 
+       <input type="text" name="operand1" size="5" />
+       <br>
+       <br>
+       Operand 2 : 
+       <input type="text" name="operand2" size="5" />
+       <br>
+       <br>
+       Operation :
+       <div class=" form-check-inline">
+        <label class="form-radio-label">
+         <input class="form-radio-input" type="radio"name="operator" value="+" /> +
+          </div></label>
+          <div class=" form-check-inline">
+            <label class="form-radio-label">
+             <input class="form-radio-input" type="radio" name="operator" value="-" /> -
+              </div></label>
+              <div class=" form-check-inline">
+                <label class="form-radio-label">
+                 <input class="form-radio-input" type="radio"name="operator" value="* "/> *
+                  </div></label>
+                  <div class=" form-check-inline">
+                    <label class="form-radio-label">
+                     <input class="form-radio-input" type="radio" name="operator"value="/"/> /
+                      </div></label>
+       
+       <br>
+       <br>
+       <center>
+        <button class="btn btn-primary" type="submit" onClick="return doCalculator(document.addForm.operator)" />
+        submit </button>
+       
+      <h1><font color='red'><div id='result'></div></font></h1></center> 
+ <br><br>   </form>
+</div>
+</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
